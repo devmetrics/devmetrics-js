@@ -32,7 +32,7 @@ function devmetricsUserEvent(event_name, user_id, event_tags) {
         data: {
             'event_name': event_name,
             'user_id': user_id,
-            'event_tags': event_tags
+            'event_tags': event_tags || []
         },
         success: function(res) {
         },
