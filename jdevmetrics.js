@@ -6,7 +6,7 @@
     },
     sendData: function (event_name, user_id, event_tags) {
       var req = new XMLHttpRequest();
-      var url = 'http://www.devmetrics.com/api/event';
+      var url = 'http://www.devmetrics.io/api/event';
       url += '?app_id=' + window.dm_app_id;
       url += '&event_name=' + event_name;
       url += '&user_id=' + user_id;
