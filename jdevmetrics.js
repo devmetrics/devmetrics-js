@@ -1,4 +1,4 @@
-(function (devmetrics) {
+(function () {
 
   var devmetrics = {
     init: function (app_id) {
