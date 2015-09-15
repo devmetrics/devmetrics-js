@@ -17,7 +17,6 @@ Add the following code into the <head> section of your HTML page to start tracki
           var a = doc.createElement("script"); a.type = "text/javascript"; a.src = '/js/tmp_js.js?' + Math.floor(((new Date()).getTime() - 1442107445573) / 8640000); var e = doc.getElementsByTagName("script")[0]; e.parentNode.insertBefore(a, e);
       })(document, window.devmetrics || []);
       devmetrics.init("your-app-id");
-      devmetrics.userEvent('page_' + location.pathname.substr(1));
 </script>
 ```
 
