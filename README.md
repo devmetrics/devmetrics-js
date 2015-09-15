@@ -2,7 +2,7 @@
 
 The devmetrics.io JS library for client side instrumentation.
 
-Devmetrics – Opensource Usage Analytic for Web.
+Devmetrics â€“ Opensource Usage Analytic for Web.
 
 Visit www.devmetrics.io to generate an app_id.
 
@@ -33,4 +33,4 @@ Tracking an event is as simple as one line of code.
 
 # Dashboards to view events and for analytic
 
-www.devmetrics.com/account
+www.devmetrics.io/account
