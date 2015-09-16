@@ -14,7 +14,7 @@ Add the following code into the <head> section of your HTML page to start tracki
 <script>
       (function (doc, inst) {
           window.devmetrics = inst; inst.q = inst.q || []; inst.init = function (token) { this.token = token; }; inst.userEvent = function (eventName) { inst.q.push(eventName); };
-          var a = doc.createElement("script"); a.type = "text/javascript"; a.src = '/js/tmp_js.js?' + Math.floor(((new Date()).getTime() - 1442107445573) / 8640000); var e = doc.getElementsByTagName("script")[0]; e.parentNode.insertBefore(a, e);
+          var a = doc.createElement("script"); a.type = "text/javascript"; a.src = 'http://rawgit.com/devmetrics/devmetrics-js/master/jdevmetrics.js?' + Math.floor(((new Date()).getTime() - 1442107445573) / 8640000); var e = doc.getElementsByTagName("script")[0]; e.parentNode.insertBefore(a, e);
       })(document, window.devmetrics || []);
       devmetrics.init("your-app-id");
 </script>
