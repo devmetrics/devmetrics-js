@@ -73,12 +73,13 @@
     this.sendData('lib_init');
   };
 
-  devmetrics.sendData = function (event_name, event_tags) {
+  devmetrics.sendData = function (event_name, event_tags, gauge) {
     var req = new XMLHttpRequest();
     var url = 'http://www.devmetrics.io/api/event';
     url += '?app_id=' + window.dm_app_id;
     url += '&event_name=' + event_name;
     url += '&user_id=' + window.dm_uid;
+    url += '&gauge=' + (gauge || 0);
     if (window.devmetricsdata['referrer']) {
       url += '&referrer=' + window.devmetricsdata['referrer'];
     }
@@ -104,6 +105,28 @@
   devmetrics.userEvent = function (event_name, event_tags) {
     event_name = event_name.replace(/[\W_]+/g, "_");
     devmetrics.sendData(event_name, event_tags);
+  };
+
+
+  /**
+   * Measure custom data
+   * @param event_name
+   * @param event_tags
+   */
+  devmetrics.measure = function (value, event_name, event_tags) {
+    event_name = event_name.replace(/[\W_]+/g, "_");
+    devmetrics.sendData(event_name, event_tags, value);
+  };
+
+  /**
+   * Measure page load time snippet
+   * @param event_name
+   */
+  devmetrics.measurePageLoad = function (page_name) {
+    page_name = page_name || window.location.href;
+    var now = new Date().getTime();
+    var page_load_time = now - performance.timing.navigationStart;
+    devmetrics.measure(page_load_time, 'page_load_' + page_name);
   };
 
   //// Postprocess early init data

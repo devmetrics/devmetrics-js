@@ -32,12 +32,20 @@ Tracking an event is as simple as one line of code.
 ```
 
 
-# Tracking a measurement
+# Tracking a custom measurement
 
 
 ```html
 <script>
       devmetrics.measure(120, 'page_load_time_in_ms');
+</script>
+```
+
+# Tracking page load time
+
+```html
+<script>
+      devmetrics.measurePageLoad(); // page name is detected automatically or pass an optional page_name argument
 </script>
 ```
 
