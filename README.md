@@ -21,7 +21,7 @@ Add the following code into the <head> section of your HTML page to start tracki
 ```
 
 
-# Tracking an event
+# Tracking an user action
 
 Tracking an event is as simple as one line of code.
 
@@ -30,6 +30,17 @@ Tracking an event is as simple as one line of code.
       devmetrics.userEvent('call2act_button_click');
 </script>
 ```
+
+
+# Tracking a measurement
+
+
+```html
+<script>
+      devmetrics.measure(120, 'page_load_time_in_ms');
+</script>
+```
+
 
 # Dashboards to view events and for analytic
 
